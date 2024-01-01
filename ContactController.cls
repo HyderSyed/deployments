@@ -7,6 +7,7 @@ public with sharing class ContactController {
                 FROM Contact
                 WHERE AccountId =: accId
                 WITH SECURITY_ENFORCED
+                system.debug('My name is Hyder');
             ];
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
